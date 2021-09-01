@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Player.cs" />
+     <Compile Include="Assets\SpriteSorter.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
