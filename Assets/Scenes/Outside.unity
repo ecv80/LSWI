@@ -196,8 +196,8 @@ MonoBehaviour:
     - {x: 0, y: 0, z: 0.7090037, w: 0.7052049}
     - {x: -0, y: -0, z: 0.59126407, w: 0.806478}
     m_StoredLocalRotations:
-    - {x: 0, y: 0, z: 0, w: 0}
-    - {x: 0, y: 0, z: 0, w: 0}
+    - {x: 0, y: 0, z: 0.7090037, w: 0.7052049}
+    - {x: -0, y: -0, z: -0.671595, w: 0.7409185}
   m_Iterations: 10
   m_Tolerance: 0.01
   m_Velocity: 0.5
@@ -266,8 +266,8 @@ MonoBehaviour:
   - {fileID: 1882326430}
   - {fileID: 1893094525}
   m_Bounds:
-    m_Center: {x: 5.061957, y: -2.4699812, z: 0}
-    m_Extent: {x: 6.4058113, y: 6.4240336, z: 0}
+    m_Center: {x: 2.911422, y: 0.66114616, z: 0}
+    m_Extent: {x: 8.324645, y: 6.7824755, z: 0}
   m_UseBatching: 1
 --- !u!212 &484639793
 SpriteRenderer:
@@ -387,7 +387,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.3, y: -8.3}
+  m_Offset: {x: -0.76529, y: -8.3}
   m_Size: {x: 4.12, y: 1.12}
   m_Direction: 1
 --- !u!114 &484639799
@@ -603,9 +603,9 @@ MonoBehaviour:
     - {x: 0, y: 0, z: 0.17067432, w: 0.98532754}
     - {x: 0, y: 0, z: -0.69625014, w: 0.7177993}
     m_StoredLocalRotations:
-    - {x: 0, y: 0, z: 0, w: 0}
-    - {x: 0, y: 0, z: 0, w: 0}
-    - {x: 0, y: 0, z: 0, w: 0}
+    - {x: 0, y: -0, z: 0.99507123, w: 0.099162966}
+    - {x: 0, y: 0, z: 0.17067432, w: 0.98532754}
+    - {x: 0, y: 0, z: -0.69625014, w: 0.7177993}
   m_Flip: 1
 --- !u!4 &863622052
 Transform:
@@ -883,8 +883,8 @@ MonoBehaviour:
     - {x: 0, y: 0, z: 0.8954375, w: -0.44518742}
     - {x: -0, y: -0, z: -0.45793515, w: 0.8889856}
     m_StoredLocalRotations:
-    - {x: 0, y: 0, z: 0, w: 0}
-    - {x: 0, y: 0, z: 0, w: 0}
+    - {x: 0, y: 0, z: 0.8954375, w: -0.44518742}
+    - {x: -0, y: -0, z: -0.6256874, w: 0.78007394}
   m_Iterations: 10
   m_Tolerance: 0.01
   m_Velocity: 0.5
@@ -948,9 +948,9 @@ MonoBehaviour:
     - {x: 0, y: 0, z: 0.18118533, w: 0.983449}
     - {x: 0, y: 0, z: -0.68864155, w: 0.725102}
     m_StoredLocalRotations:
-    - {x: 0, y: 0, z: 0, w: 0}
-    - {x: 0, y: 0, z: 0, w: 0}
-    - {x: 0, y: 0, z: 0, w: 0}
+    - {x: 0, y: -0, z: 0.9938622, w: 0.110624954}
+    - {x: 0, y: 0, z: 0.18118533, w: 0.983449}
+    - {x: 0, y: 0, z: -0.68864155, w: 0.725102}
   m_Flip: 1
 --- !u!4 &1548955762
 Transform:

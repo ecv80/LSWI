@@ -34,10 +34,18 @@ public class Player : MonoBehaviour
         float dT=Time.deltaTime;
 
         //Input (and movement for now)
-        if (Input.GetKey(KeyCode.LeftArrow)||Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.LeftArrow)||Input.GetKey(KeyCode.A)) {
+            //Face left
+            if (transform.localScale.x<0)
+                transform.localScale=new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
             transform.position=transform.position+Vector3.left*dT*speed;
-        if (Input.GetKey(KeyCode.RightArrow)||Input.GetKey(KeyCode.D))
+        }
+        if (Input.GetKey(KeyCode.RightArrow)||Input.GetKey(KeyCode.D)) {
+            //Face right
+            if (transform.localScale.x>=0)
+                transform.localScale=new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
             transform.position=transform.position+Vector3.right*dT*speed;
+        }
         if (Input.GetKey(KeyCode.UpArrow)||Input.GetKey(KeyCode.W))
             transform.position=transform.position+Vector3.up*dT*speed;
         if (Input.GetKey(KeyCode.DownArrow)||Input.GetKey(KeyCode.S))
