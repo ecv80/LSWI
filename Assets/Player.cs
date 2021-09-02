@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Player : MonoBehaviour
 {
@@ -65,13 +67,21 @@ public class Player : MonoBehaviour
                 continue;
             if (hit == coll)
                 continue;
+            
+            if (hit.isTrigger) { //Treat a trigger like a trigger ¬L¬
+                Destination d=hit.GetComponent<Destination>();
+                if (d) { //A teleport!
+                    SceneManager.LoadScene(d.sceneName);
+                }
+            }
+            else { //Move out of the collider
+                //debugPoints.Add(new DebugPoint(hit.bounds.center, Color.red));
 
-            //debugPoints.Add(new DebugPoint(hit.bounds.center, Color.red));
+                ColliderDistance2D colliderDistance = hit.Distance(coll);
 
-            ColliderDistance2D colliderDistance = hit.Distance(coll);
-
-            if (colliderDistance.isOverlapped)
-                transform.Translate((colliderDistance.pointA - colliderDistance.pointB));
+                if (colliderDistance.isOverlapped)
+                    transform.Translate((colliderDistance.pointA - colliderDistance.pointB));
+            }
         }
         
         //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
