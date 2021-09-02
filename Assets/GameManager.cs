@@ -44,6 +44,8 @@ public class GameManager : MonoBehaviour
     {
         player=FindObjectOfType<Player>();
         cam=FindObjectOfType<Cam>();
+
+        cam.bounds=GameObject.Find("SceneBounds").GetComponent<Collider2D>().bounds;
     }
 
     
