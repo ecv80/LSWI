@@ -5,7 +5,8 @@ using UnityEngine;
 public class SpriteZSorter : MonoBehaviour //Adjusts sprites z order dynamically
 {
     public bool always_on_Top=false; //Precedence over behind
-    public bool always_behind=false;
+    public bool always_Behind=false;
+    public bool is_Player=false;
 
     SpriteRenderer sr;
     Collider2D coll;
@@ -21,16 +22,19 @@ public class SpriteZSorter : MonoBehaviour //Adjusts sprites z order dynamically
     {
         if (!sr || !sr.isVisible) //If sr is null or is not visible, return. (Legal statement because second condition is never checked unless sr is not null)
             return;
-        if (!coll)
-            return;
         
         if (always_on_Top)
             sr.sortingOrder=short.MaxValue;
-        else
-            if (always_behind)
+        else {
+            if (always_Behind)
                 sr.sortingOrder=short.MinValue;
             else {
-                sr.sortingOrder = (int)(coll.bounds.min.y*-10f); 
+                if (is_Player && coll) { //Sort by collider if it's player
+                    sr.sortingOrder = (int)(coll.bounds.min.y*-10f); 
+                }
+                else //Otherwise by sprite bounds
+                    sr.sortingOrder = (int)(sr.bounds.min.y*-10f); 
             }
+        }
     }
 }
