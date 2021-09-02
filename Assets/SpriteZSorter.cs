@@ -7,7 +7,10 @@ public class SpriteZSorter : MonoBehaviour //Adjusts sprites z order dynamically
     public bool alwaysOnTop=false; //Precedence over behind
     public bool alwaysBehind=false;
     public bool isPlayer=false;
-    public float yThreshold=5f; //How far from the bottom of the sprite we want to switch z order
+
+    public enum Pivot {bottom, top, center};
+    public Pivot pivot=Pivot.bottom;
+    public float yThreshold=5f; //How far from the ref point (the pivot in the setting above) of the sprite we want to switch z order
 
     SpriteRenderer sr;
     Collider2D coll;
@@ -33,8 +36,13 @@ public class SpriteZSorter : MonoBehaviour //Adjusts sprites z order dynamically
                 if (isPlayer && coll) { //Sort by collider if it's player
                     sr.sortingOrder = (int)(coll.bounds.min.y*-10f); 
                 }
-                else //Otherwise by sprite bounds
-                    sr.sortingOrder = (int)((sr.bounds.center.y+yThreshold)*-10f); 
+                else {//Otherwise by sprite bounds
+                    float y=pivot==Pivot.bottom?sr.bounds.min.y:
+                        pivot==Pivot.center?sr.bounds.center.y:
+                        pivot==Pivot.top?sr.bounds.max.y:0f;
+
+                    sr.sortingOrder = (int)((y+yThreshold)*-10f); 
+                }
             }
         }
     }
