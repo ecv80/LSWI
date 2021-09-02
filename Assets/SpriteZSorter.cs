@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class SpriteZSorter : MonoBehaviour //Adjusts sprites z order dynamically
 {
-    public bool always_on_Top=false; //Precedence over behind
-    public bool always_Behind=false;
-    public bool is_Player=false;
+    public bool alwaysOnTop=false; //Precedence over behind
+    public bool alwaysBehind=false;
+    public bool isPlayer=false;
+    public float yThreshold=5f; //How far from the bottom of the sprite we want to switch z order
 
     SpriteRenderer sr;
     Collider2D coll;
@@ -23,17 +24,17 @@ public class SpriteZSorter : MonoBehaviour //Adjusts sprites z order dynamically
         if (!sr || !sr.isVisible) //If sr is null or is not visible, return. (Legal statement because second condition is never checked unless sr is not null)
             return;
         
-        if (always_on_Top)
+        if (alwaysOnTop)
             sr.sortingOrder=short.MaxValue;
         else {
-            if (always_Behind)
+            if (alwaysBehind)
                 sr.sortingOrder=short.MinValue;
             else {
-                if (is_Player && coll) { //Sort by collider if it's player
+                if (isPlayer && coll) { //Sort by collider if it's player
                     sr.sortingOrder = (int)(coll.bounds.min.y*-10f); 
                 }
                 else //Otherwise by sprite bounds
-                    sr.sortingOrder = (int)(sr.bounds.min.y*-10f); 
+                    sr.sortingOrder = (int)((sr.bounds.center.y+yThreshold)*-10f); 
             }
         }
     }

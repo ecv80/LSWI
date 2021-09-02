@@ -153,9 +153,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73da9f9227cb0f87d8dedf0af01553ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  always_on_Top: 0
-  always_Behind: 0
-  is_Player: 0
+  alwaysOnTop: 0
+  alwaysBehind: 0
+  isPlayer: 0
+  yThreshold: 0
 --- !u!212 &24067067
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -232,8 +233,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5025033, y: 2.81}
-  m_Size: {x: 11.167335, y: 2.8644865}
+  m_Offset: {x: 0.00289378, y: 4.08}
+  m_Size: {x: 10.15659, y: 2.8644865}
   m_Direction: 1
 --- !u!70 &24067070
 CapsuleCollider2D:
@@ -248,11 +249,11 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5025033, y: 1.54}
-  m_Size: {x: 11.167335, y: 2.8644865}
+  m_Offset: {x: 0.00289378, y: 1.5114517}
+  m_Size: {x: 10.15659, y: 2.8644865}
   m_Direction: 1
---- !u!70 &24067071
-CapsuleCollider2D:
+--- !u!61 &24067071
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -264,9 +265,19 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5025033, y: 4.04}
-  m_Size: {x: 11.167335, y: 2.8644865}
-  m_Direction: 1
+  m_Offset: {x: 0, y: 3.0423121}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 10.24, y: 10.24}
+    newSize: {x: 10.24, y: 10.24}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 10.060308, y: 2.0864725}
+  m_EdgeRadius: 0
 --- !u!1 &271420384
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,6 +320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 346333561}
+  - component: {fileID: 346333562}
   m_Layer: 0
   m_Name: Clothes shop
   m_TagString: Untagged
@@ -325,7 +337,7 @@ Transform:
   m_GameObject: {fileID: 346333560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.79, y: -0.65, z: -3.9037018}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1729559535}
   - {fileID: 24067068}
@@ -333,6 +345,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &346333562
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346333560}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -5.7362638, y: 2.0725918}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.800437, y: 7.448061}
+  m_EdgeRadius: 0
 --- !u!1 &385769291
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,9 +621,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73da9f9227cb0f87d8dedf0af01553ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  always_on_Top: 0
-  always_Behind: 0
-  is_Player: 1
+  alwaysOnTop: 0
+  alwaysBehind: 0
+  isPlayer: 0
+  yThreshold: 0
 --- !u!114 &484639799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1067,9 +1106,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73da9f9227cb0f87d8dedf0af01553ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  always_on_Top: 1
-  always_Behind: 0
-  is_Player: 0
+  alwaysOnTop: 1
+  alwaysBehind: 0
+  isPlayer: 0
+  yThreshold: 0
 --- !u!212 &1399566257
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1127,7 +1167,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399566255}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.4531875, y: 4.887777, z: 3.9037018}
+  m_LocalPosition: {x: -2.073188, y: 4.887777, z: 3.9037018}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 346333561}
@@ -1342,8 +1382,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!70 &1729559530
-CapsuleCollider2D:
+--- !u!61 &1729559530
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1355,9 +1395,19 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5025033, y: 2.78}
-  m_Size: {x: 11.167335, y: 2.8644865}
-  m_Direction: 1
+  m_Offset: {x: 0, y: 3.0423121}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 10.24, y: 10.24}
+    newSize: {x: 10.24, y: 10.24}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 10.060308, y: 2.0864725}
+  m_EdgeRadius: 0
 --- !u!70 &1729559531
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1371,8 +1421,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5025033, y: 4.04}
-  m_Size: {x: 11.167335, y: 2.8644865}
+  m_Offset: {x: 0.00289378, y: 4.04}
+  m_Size: {x: 10.15659, y: 2.864487}
   m_Direction: 1
 --- !u!70 &1729559532
 CapsuleCollider2D:
@@ -1387,8 +1437,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5025033, y: 1.5114517}
-  m_Size: {x: 11.167335, y: 2.8644865}
+  m_Offset: {x: 0.00289378, y: 1.5114517}
+  m_Size: {x: 10.15659, y: 2.8644865}
   m_Direction: 1
 --- !u!114 &1729559533
 MonoBehaviour:
@@ -1402,9 +1452,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73da9f9227cb0f87d8dedf0af01553ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  always_on_Top: 0
-  always_Behind: 0
-  is_Player: 0
+  alwaysOnTop: 0
+  alwaysBehind: 0
+  isPlayer: 0
+  yThreshold: 0
 --- !u!212 &1729559534
 SpriteRenderer:
   m_ObjectHideFlags: 0
