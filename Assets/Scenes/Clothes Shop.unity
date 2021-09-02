@@ -462,7 +462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alwaysOnTop: 0
   alwaysBehind: 0
-  isPlayer: 0
+  isPlayer: 1
   yThreshold: 0
 --- !u!114 &484639799
 MonoBehaviour:
@@ -513,7 +513,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f72d8847494d61d5091c8c24a4d0fc1c, type: 3}
+  m_Script: {fileID: 11500000, guid: 64d55cdda41c9c957933e89379306687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!20 &519420031
@@ -586,6 +586,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  startInSetPosition: 0
+  startingPosition: {x: 0, y: 0, z: 0}
+  startingFacing: 0
+  cam: {fileID: 0}
 --- !u!1 &551827214
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,8 +629,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 664033318}
-  - component: {fileID: 664033320}
   - component: {fileID: 664033319}
+  - component: {fileID: 664033320}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Untagged
@@ -661,6 +665,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Outside
+  ignorePosition: 0
+  position: {x: -3.54, y: 2.63, z: 0}
+  facing: 1
 --- !u!61 &664033320
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -685,7 +692,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 3.88}
+  m_Size: {x: 1, y: 3.63}
   m_EdgeRadius: 0
 --- !u!1 &746977393
 GameObject:

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum Facing {Left, Right, Up, Down};
 
 public class Player : MonoBehaviour
 {
@@ -28,6 +29,13 @@ public class Player : MonoBehaviour
     {
         speed=transform.localScale.x*20f;
         coll=GetComponent<CapsuleCollider2D>();
+
+        if (GameManager.instance.startInSetPosition) {
+            transform.position=GameManager.instance.startingPosition;
+            Face(GameManager.instance.startingFacing);
+        }
+
+        GameManager.instance.cam.FocusOn(transform.position);
     }
 
     // Update is called once per frame
@@ -37,15 +45,11 @@ public class Player : MonoBehaviour
 
         //Input (and movement for now)
         if (Input.GetKey(KeyCode.LeftArrow)||Input.GetKey(KeyCode.A)) {
-            //Face left
-            if (transform.localScale.x<0)
-                transform.localScale=new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            Face(Facing.Left);
             transform.position=transform.position+Vector3.left*dT*speed;
         }
         if (Input.GetKey(KeyCode.RightArrow)||Input.GetKey(KeyCode.D)) {
-            //Face right
-            if (transform.localScale.x>=0)
-                transform.localScale=new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            Face(Facing.Right);
             transform.position=transform.position+Vector3.right*dT*speed;
         }
         if (Input.GetKey(KeyCode.UpArrow)||Input.GetKey(KeyCode.W))
@@ -69,8 +73,20 @@ public class Player : MonoBehaviour
                 continue;
             
             if (hit.isTrigger) { //Treat a trigger like a trigger ¬L¬
+                //NOTE: For some reason, as soon as the trigger checkbox is ticked
+                //trigger colliders appear to become bigger in height when detected by OverlapCapsule
+                //than they really are. The collider gizmo is still drawn as the original size tho.
+                //It appears to be about three times as high.
                 Destination d=hit.GetComponent<Destination>();
                 if (d) { //A teleport!
+                    if (d.ignorePosition) {
+                        GameManager.instance.startInSetPosition=false;
+                    }
+                    else {
+                        GameManager.instance.startInSetPosition=true;
+                        GameManager.instance.startingPosition=d.position;
+                        GameManager.instance.startingFacing=d.facing;
+                    }
                     SceneManager.LoadScene(d.sceneName);
                 }
             }
@@ -100,7 +116,22 @@ public class Player : MonoBehaviour
         }
     }
 
-    public float getSpeed() {
+    public float GetSpeed() {
         return speed;
+    }
+
+    void Face(Facing f) {
+        switch(f) {
+            case Facing.Left:
+                if (transform.localScale.x<0)
+                    transform.localScale=new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+                break;
+            case Facing.Right:
+                if (transform.localScale.x>=0)
+                    transform.localScale=new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+                break;
+            default:
+                break;
+        }
     }
 }
