@@ -89,4 +89,8 @@ public class Player : MonoBehaviour
             debugPoints.RemoveRange(0, debugPoints.Count-100);
         }
     }
+
+    public float getSpeed() {
+        return speed;
+    }
 }
