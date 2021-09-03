@@ -64,20 +64,18 @@ public class Player : MonoBehaviour
         //https://roystan.net/articles/character-controller-2d.html
         //with a few changes and I will be syncing the transforms manually instead
 
-        Physics2D.OverlapCapsule(coll.bounds.center, coll.size, coll.direction, 0, contactFilter2D, collidedColliders);
+        int hits=Physics2D.OverlapCapsule(coll.bounds.center, coll.size, coll.direction, 0, contactFilter2D, collidedColliders);
 
-        foreach (Collider2D hit in collidedColliders) {
-            if (hit==null)
-                continue;
-            if (hit == coll)
+        for (int i=0; i<hits; i++) {
+            if (collidedColliders[i] == coll)
                 continue;
             
-            if (hit.isTrigger) { //Treat a trigger like a trigger ¬L¬
+            if (collidedColliders[i].isTrigger) { //Treat a trigger like a trigger ¬L¬
                 //NOTE: For some reason, as soon as the trigger checkbox is ticked
                 //trigger colliders appear to become bigger in height when detected by OverlapCapsule
                 //than they really are. The collider gizmo is still drawn as the original size tho.
                 //It appears to be about three times as high.
-                Destination d=hit.GetComponent<Destination>();
+                Destination d=collidedColliders[i].GetComponent<Destination>();
                 if (d) { //A teleport!
                     if (d.ignorePosition) {
                         GameManager.instance.startInSetPosition=false;
@@ -93,7 +91,7 @@ public class Player : MonoBehaviour
             else { //Move out of the collider
                 //debugPoints.Add(new DebugPoint(hit.bounds.center, Color.red));
 
-                ColliderDistance2D colliderDistance = hit.Distance(coll);
+                ColliderDistance2D colliderDistance = collidedColliders[i].Distance(coll);
 
                 if (colliderDistance.isOverlapped)
                     transform.Translate((colliderDistance.pointA - colliderDistance.pointB));

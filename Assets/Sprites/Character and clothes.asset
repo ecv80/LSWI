@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf7c34a0dc4e6348bea04faa70406ee, type: 3}
+  m_Name: New Sprite Library Asset
+  m_EditorClassIdentifier: 
+  m_Labels:
+  - m_Name: New Category
+    m_Hash: -1887952825
+    m_CategoryList:
+    - m_Name: Naked
+      m_Hash: -1263755471
+      m_Sprite: {fileID: 21300000, guid: cae0c8a9d6a68db37a5fa0dba669071a, type: 3}
+    - m_Name: Jacket 1
+      m_Hash: 191274640
+      m_Sprite: {fileID: 21300000, guid: de75f8b54da7051b79525c9e55bfcdd5, type: 3}
