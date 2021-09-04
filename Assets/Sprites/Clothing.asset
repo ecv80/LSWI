@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf7c34a0dc4e6348bea04faa70406ee, type: 3}
+  m_Name: Clothing
+  m_EditorClassIdentifier: 
+  m_Labels:
+  - m_Name: Jacket Front
+    m_Hash: -1431988942
+    m_CategoryList:
+    - m_Name: Default
+      m_Hash: 753088835
+      m_Sprite: {fileID: 1496216349883262072, guid: bacfb48201346e43895c8ff12a9bd9fe,
+        type: 3}
+    - m_Name: Cape
+      m_Hash: -216570375
+      m_Sprite: {fileID: 1205735707324298593, guid: 2283ea346d9266279ae3b1f79a38c4b7,
+        type: 3}
+  - m_Name: Jacket Back
+    m_Hash: -311546687
+    m_CategoryList:
+    - m_Name: Default
+      m_Hash: 753088835
+      m_Sprite: {fileID: -3388233788987693695, guid: bacfb48201346e43895c8ff12a9bd9fe,
+        type: 3}
+    - m_Name: Cape
+      m_Hash: -216570375
+      m_Sprite: {fileID: -4203699768290953662, guid: 2283ea346d9266279ae3b1f79a38c4b7,
+        type: 3}
+  - m_Name: Jacket Sleeve L
+    m_Hash: -1456544884
+    m_CategoryList:
+    - m_Name: Default
+      m_Hash: 753088835
+      m_Sprite: {fileID: -4128052149288092245, guid: bacfb48201346e43895c8ff12a9bd9fe,
+        type: 3}
+    - m_Name: Cape
+      m_Hash: -216570375
+      m_Sprite: {fileID: 6433653054007918551, guid: 2283ea346d9266279ae3b1f79a38c4b7,
+        type: 3}
+  - m_Name: Jacket Sleeve R
+    m_Hash: 1394728687
+    m_CategoryList:
+    - m_Name: Default
+      m_Hash: 753088835
+      m_Sprite: {fileID: -225161953348499669, guid: bacfb48201346e43895c8ff12a9bd9fe,
+        type: 3}
+    - m_Name: Cape
+      m_Hash: -216570375
+      m_Sprite: {fileID: -4190997001508101499, guid: 2283ea346d9266279ae3b1f79a38c4b7,
+        type: 3}

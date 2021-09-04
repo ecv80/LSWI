@@ -76,6 +76,7 @@ public class Player : MonoBehaviour
                 //than they really are. The collider gizmo is still drawn as the original size tho.
                 //It appears to be about three times as high.
                 Destination d=collidedColliders[i].GetComponent<Destination>();
+                NPC npc=collidedColliders[i].GetComponent<NPC>();
                 if (d) { //A teleport!
                     if (d.ignorePosition) {
                         GameManager.instance.startInSetPosition=false;
@@ -86,6 +87,9 @@ public class Player : MonoBehaviour
                         GameManager.instance.startingFacing=d.facing;
                     }
                     SceneManager.LoadScene(d.sceneName);
+                }
+                if (npc) { //NPC interaction
+                    npc.startConversation();
                 }
             }
             else { //Move out of the collider

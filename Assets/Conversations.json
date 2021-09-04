@@ -1,0 +1,28 @@
+{
+    "Clothes Shop Keeper": [
+        {
+            "node": "0",
+            "statement": "Hello, I sell clothes!",
+            "replies": [
+                {"value": "Oh, really? You don't say?", "nextNode": "1"},
+                {"value": "Okay, show me something!", "nextNode": ""},
+                {"value": "Not interested.", "nextNode": ""}
+            ]
+        },
+        {
+            "node": "1",
+            "statement": "No, REALLY. I DO SELL clothes.",
+            "replies": [
+                {"value": "Okay... just DON'T mention it.", "nextNode": "0"},
+                {"value": "I am rubber, you are glue.", "nextNode": "2"}
+            ]
+        },
+        {
+            "node": "2",
+            "statement": "Wut?!",
+            "replies": [
+                {"value": "Nevermind.", "nextNode": ""}
+            ]
+        },
+    ]
+}
