@@ -61,11 +61,20 @@
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.2D.Animation.Runtime">
+ <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.IK.Editor">
+ <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.IK.Runtime">
+ <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
@@ -73,32 +82,14 @@
  <Reference Include="Unity.Timeline">
  <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.2D.Animation.Triangle.Runtime">
+ <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
  <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Animation.Runtime">
- <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Animation.Triangle.Runtime">
- <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics">
  <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
@@ -106,14 +97,26 @@
  <Reference Include="Unity.InternalAPIEngineBridge.001">
  <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.2D.Common.Runtime">
  <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Tilemap.Editor">
+ <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Animation.Editor">
  <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.VisualStudio.Editor">
+ <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Mathematics.Editor">
  <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro">
+ <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Common.Editor">
  <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
@@ -121,11 +124,14 @@
  <Reference Include="Unity.InternalAPIEditorBridge.001">
  <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
  </Reference>
- <Reference Include="Unity.2D.IK.Editor">
- <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
- <Reference Include="Unity.2D.IK.Runtime">
- <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
+ <Reference Include="PsdPlugin">
+ <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Psdimporter.Editor">
+ <HintPath>/home/ecv/UnityProjects/LSWI/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/home/ecv/Unity/Hub/Editor/2019.2.0b7/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
